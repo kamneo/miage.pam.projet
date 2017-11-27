@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rendez-Vous Geolocalises</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">Mes rendez-vous</string>
+    <string name="newEvent">Créer un nouveau rendez-vous</string>
+    <string name="eventName">Nom de l\'événement</string>
+    <string name="contactNames">Ajouter un contact</string>
+    <string name="date_button_set">Changer</string>
+</resources>
