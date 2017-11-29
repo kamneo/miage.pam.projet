@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="@dimen/fab_margin"
-            android:onClick="addContact"
+            android:onClick="changeDate"
             app:backgroundTint="@color/colorPrimary"
             app:srcCompat="@android:drawable/ic_menu_add" />
     </LinearLayout>
@@ -47,9 +47,13 @@
             android:layout_height="wrap_content"
             android:text="Date : "/>
         <EditText
+            android:id="@+id/date_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="datetime"/>
+            android:focusable="false"
+            android:inputType="date"
+            android:onClick="setDate"
+            android:hint="@string/date_value_default"/>
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -69,13 +73,15 @@
                 android:checked="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Proposer le rendez-vous ici"/>
+                android:text="Proposer le rendez-vous ici"
+                android:onClick="updateRadio"/>
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entrer une adresse"/>
+                android:text="Entrer une adresse"
+                android:onClick="updateRadio"/>
         </RadioGroup>
     </LinearLayout>
     <LinearLayout
@@ -83,15 +89,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <EditText
+            android:id="@+id/adresse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context="projet.pam.rendez_vousgeolocalises.MapsActivity" />
+        tools:context="projet.pam.rendez_vousgeolocalises.CreateEventActivity" />
 
     </LinearLayout>
 </LinearLayout>
